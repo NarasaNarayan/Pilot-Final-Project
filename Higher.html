@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadhuPushpa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- google fontes oxm -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
+        rel="stylesheet">
+    <!-- popines -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .gradient-text {
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient(to right,
+                    hsl(0, 0%, 0%),
+                    #0f0f0f,
+                    #3f6e7a,
+                    #56837e,
+                    #699b9c,
+                    #4e8385);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .healthcare-image {
+            height: 500px;
+            width: 100%;
+        }
+        .healthcare-image{
+            h1{
+                font-size: 42px;
+
+            }
+            p{
+                font-size: 28px;
+
+            }
+        }
+
+        .text-box {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            max-width: 600px;
+            padding-left: 10px;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .text-box p{
+            font-size: 18px;
+        }
+
+        .overview-text {
+            p {
+                font-size: 42px;
+                padding: 10px;
+            }
+        }
+        .overview {
+            h1{
+                font-size: 42px;
+            }
+            h3{
+                font-size: 26px;
+            }
+            ol{
+                font-size: 23px;
+            }
+        }
+
+        .image {
+            margin-left: 60px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .service {
+            font-size: 42px;
+        }
+        .service h1 {
+            padding-top: 100px;
+            font-size: 42px;
+        }
+
+        .service h4 {
+            font-size: 26px;
+        }
+
+        .service ol {
+            font-size: 23px;
+        }
+
+        .overview {
+            background-image: url(images/bgframe.webp);
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 768px) {
+            .image {
+                margin-top: -50px;
+                padding-bottom: -50px;
+                
+            }
+
+            .healthcare-image {
+                width: 100%;
+                height: 400px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                align-items: center;
+            }
+            .healthcare-image{
+                h1{
+                    font-size: 22px;
+                }
+                p{
+                    font-size: 10px;
+                }
+            }
+
+            .text-box {
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 10px;
+                max-width: 340px;
+                padding-left: 10px;
+                font-size: 12px;
+                margin-top: -60px;
+                margin-left: 40px;
+            }
+
+            .gradient-text {
+                font-size: 25px;
+                font-weight: bold;
+                padding-left: 10px;
+                background: linear-gradient(to right,
+                        hsl(0, 0%, 0%),
+                        #0f0f0f,
+                        #3f6e7a,
+                        #56837e,
+                        #699b9c,
+                        #4e8385);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .service {
+                padding-top: 50px;
+                font-size: 30px;
+            }
+
+            .service h4 {
+                font-size: 22px;
+            }
+            .service ol{
+                font-size: 18px;
+            }
+        }
+        @media (max-width:426px){
+            .overview {
+                 h1{
+                font-size: 32px;
+            }
+            h3{
+                font-size: 22px;
+            }
+            ol{
+                font-size: 18px;
+            }
+        }
+        .service{
+            h1{
+                font-size: 32px;
+            }
+            h4{
+                font-size: 22px;
+            }
+            ol{
+                font-size: 18px;
+            }
+        }
+        }
+        @media (max-width:376px){
+            .text-box {
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 10px;
+                max-width: 300px;
+            }
+            .overview {
+                 h1{
+                font-size: 32px;
+            }
+            h3{
+                font-size: 18px;
+            }
+            ol{
+                font-size: 15px;
+            }
+        }
+        .service{
+            h1{
+                font-size: 32px;
+            }
+            h4{
+                font-size: 18px;
+            }
+            ol{
+                font-size: 15px;
+            }
+        }
+     }
+     @media (max-width:320px){
+        .gradient-text {
+                font-size: 15px;
+                font-weight: bold;
+        }
+        .text-box {
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 10px;
+                max-width: 280px;
+                margin-left: 60px;
+        }
+     }
+
+    </style>
+</head>
+
+
+<body style="overflow-x: hidden ; width: 100%;">
+
+    <!-- Navbar starts here  -->
+
+
+
+    <nav class="navbar  navbar-expand-lg navbar-light fixing-navbar-top" style=' position: fixed; top: 0; width: 100%; z-Index:1000; '>
+        <div class="container-fluid navbar-img">
+            <a class="pt-3 pb-3 " href="index.html"><img class="logo-image" width="120px" height="100px" src="Photo/MPT.webp" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" >
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " href="#" id="industriesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Industries
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="industriesDropdown" >
+                            <div class="industries-title">Industries <span class="dropdown-indicator"></span></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <li><a class="dropdown-item" href="Automative.html">Automotive</a></li>
+                                    <li><a class="dropdown-item" href="Higher.html">Higher Education and Research</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="Insurence.html">Insurance</a></li>
+                                    <li><a class="dropdown-item" href="Telecom.html">Telecom, Media & Technology</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="TravelandLogistics.html">Travel, Transportation &
+                                            Logistics</a></li>
+                                </div>
+                                <div class="col-md-6">
+                                    <li><a class="dropdown-item" href="Financial.html">Financial Services</a></li>
+                                    <li><a class="dropdown-item" href="Healthcare.html"> Health Care</a></li>
+                                    <li><a class="dropdown-item" href="Manufature.html">Manufacturing</a></li>
+                                    <li><a class="dropdown-item" href="RetailandCPG.html">Retail & CPG</a></li>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <img style="margin-top: -350px;" src="Photo/18.webp" alt="">
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="industriesDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="industriesDropdown">
+                            <div class="industries-title">Services <span class="dropdown-indicator"></span></div>
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <li><a class="dropdown-item" href="Application.html">Application Service</a></li>
+                                    <li><a class="dropdown-item" href="Webdevlopment.html">Web Development</a></li>
+                                    <li><a class="dropdown-item" href="Network.html">Network Management</a></li>
+                                    <li><a class="dropdown-item" href="Business.html">Business Process Service</a></li>
+                                    <li><a class="dropdown-item" href="Cloud.html">Cloud</a></li>
+                                    <li><a class="dropdown-item" href="Tech.html">Tech Solution and Integration</a></li>
+                                    <li><a class="dropdown-item" href="GEN-AI.html">Data in Gen-Al</a></li>
+                                    <li><a class="dropdown-item" href="Dataanalist.html">Data Analytics</a></li>
+                                </div>
+                                <div class="col-md-6">
+                                    <img style="margin-top: 170px;" width="350px" height="350px" src="Photo/20.webp"
+                                        alt="">
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="industriesDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="industriesDropdown">
+                            <div class="industries-title">About Us <span class="dropdown-indicator"></span></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <li><a class="dropdown-item" href="Whoweare.html">Who we are</a></li>
+                                    
+                                    <li><a class="dropdown-item" href="#">Message from CEO</a></li>
+                                    <li><a class="dropdown-item" href="#">About MPT</a></li>
+                                    <img width="200px" height="200px" src="Photo/19.webp" alt="">
+                                </div>
+                                <div class="col-md-6">
+
+                                    <img style="margin-top: 70px;" width="300px" height="300px" src="Photo/16.webp"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="industriesDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Careers
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="industriesDropdown">
+                            <div class="industries-title">Careers <span class="dropdown-indicator"></span></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <li><a class="dropdown-item" href="Verysoon.html">Search Jobs</a></li>
+                                    <li><a class="dropdown-item" href="Verysoon.html">Careers Consultation</a></li>
+                                    <li><a class="dropdown-item" href="Meet_MPTPeople.html">Meet MPT People</a></li>
+
+
+                                </div>
+                                <div class="col-md-6">
+                                    <img style="margin-left: -80px;" width="400px" height="400px" src="Photo/21.webp"
+                                        alt="">
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="tel:+91-8310884090"> <i
+                                class="fa-solid fa-phone"></i> +91-8310884090</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar ends here  -->
+
+    <div class="container-fluid healthcare-image"
+        style="background-image: url(images/HigherEducation/75.webp); background-size: cover; background-position: center; margin-top: 150px; ">
+        <img src="" alt="" class="img-fluid"
+            style=" padding-top: 100px; margin-left: 15px; width: 400px; margin-top:60px;">
+        <h1 class="gradient-text"
+            style=" font-weight: bold;  margin-left: 20px; font-family: Oxanium; margin-top: 40px;">
+            HIGHER EDUCATION & RESEARCH </h1>
+        <div class="text-box " style="font-weight: semibold;">
+            <p>MPT provide a range of services that support
+                teaching, learning, research,and operational efficiency in higher education and research
+                institutions.</p>
+        </div>
+    </div>
+
+    <div class="row shadow-lg pt-2"
+        style="box-shadow: 2px 0px 0px rgba(0, 0, 0, 0.24); background-color: rgb(78, 76, 76); height: 60px;">
+        <div class="col-6 col-md-2 d-flex align-items-center justify-content-center">
+            <p class="text-white small " style="font-family: Poppins;">Overview</p>
+            <img class="mx-1" src="images/Financialservice/arrow-alt-circle-down.webp" alt=""
+                style="margin-top: -14px;">
+        </div>
+
+        <div class="col-6 col-md-2 d-flex align-items-center justify-content-center">
+            <p class="text-white small" style="font-family: Poppins;">Our Services</p>
+            <img class="mx-1" src="images/Financialservice/arrow-alt-circle-down.webp" alt=""
+                style="margin-top: -14px;">
+        </div>
+    </div>
+
+    <div class="overview" style="background-image:url(images/bgframe.webp); padding-right: 50px; padding-top: 50px;">
+        <h1 style="margin-top: 30px; font-weight: bolder; margin-left: 70px;  font-family: poppins;">
+            Overview</h1>
+        <h3 style="margin-left: 70px; margin-top: 20px; font-family: poppins; font-weight: normal; " ;>
+            The higher education and research sector
+            encompasses institutions and organizations <br /> that provide post-secondary education, conduct research,
+            and develop new <br /> technologies. This sector includes:</h3>
+        <ol style="margin-left: 70px; margin-top: 30px; font-family: poppins; font-weight: lighter;" ;>
+            <li>Universities and Colleges: Institutions that offer
+                undergraduate and graduate degree programs.
+            </li>
+            <li>Research Institutes: Organizations that conduct research
+                in various fields, such as science, <br /> technology, engineering, and mathematics (STEM).</li>
+            <li>Libraries and Archives: Institutions that provide access
+                to information resources, including books, joumals, and digital collections.</li>
+        </ol>
+    </div>
+
+    <div class="container">
+        <div class=" " style="background-image: url(images/HigherEducation/71.webp); background-repeat: no-repeat; ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12">
+                        <img src="images/HigherEducation/74.webp" alt="" class="img-fluid ">
+                        <!-- <img src="images/HigherEducation/72.webp" alt="" class="img-fluid" style="padding-left: 150px;"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 fs-5 service" style="padding-top: 10px; margin-top: -110px;">
+        <h1 class=" " style="margin-top: 35px; font-weight: bolder; margin-left: 70px;  font-family: poppins;">
+            Services</h1>
+        <h4 style="margin-left: 70px; margin-top: 20px; font-weight: 600px; font-family: poppins; font-weight: normal;">
+            MPT play a vital role in
+            supporting the higher education and research sector by providing <br /> a range of services, including:
+        </h4>
+        <ol
+            style="margin-left: 70px; padding-right: 50px; margin-top: 20px;  font-family: poppins; font-weight: lighter; ">
+            <li>Learning Management Systems (LMS): Software platforms that enable online learning, course management,
+                and student engagement.
+            </li>
+            <li>Research Computing: High-performance computing resources, such as clusters, grids, and clouds, that
+                support research in various fields.</li>
+            <li>Data Analytics: Services that help institutions analyze and interpret large datasets, including student
+                data, research data, and operational data.</li>
+            <li>Cybersecurity: Solutions that protect institutions from cyber threats, including network security,
+                endpoint security, and incident response.</li>
+            <li>Digital Libraries: Online platforms that provide access to digital collections, including e-books,
+                journals, and other digital resources</li>
+            <li>Collaboration Tools: Software platforms that enable collaboration among researchers, students, and
+                faculty, including video conferencing, instant messaging, and project management
+            </li>
+            <li>Artificial Intelligence (AI) and Machine Learning (ML): Services that apply Al and ML to various
+                applications, including student success, research, and operational efficiency.</li>
+            <li>Cloud Services: Cloud-based infrastructure, platforms, and software that support teaching, learning,
+                and research.</li>
+            <li>IT Consulting: Services that help institutions assess, plan, and implement IT strategies, including
+                technology roadmaps and IT governance.</li>
+            <li>Digital Transformation: Services that help institutions transform their operations, including
+                digitalization of administrative processes, online learning, and research support.</li>
+        </ol>
+    </div>
+
+    <div class="container">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-6 col-12 mb-4 px-5">
+                <img src="images/HigherEducation/76.webp" class="img-fluid rounded" alt="" style="border-radius: 20px;">
+            </div>
+            <div class="col-md-6 col-12 mb-4 px-5">
+                <img src="images/HigherEducation/77.webp" class="img-fluid rounded" alt="" style="border-radius: 20px;">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer section starts here  -->
+
+    <footer class="bg-light py-4 mt-3 shadow-sm email-box ">
+        <div class="container-fluid">
+            <!-- Row 1: Subscribe and Social Media -->
+            <div class="row justify-content-left">
+                <!-- Column 1: Newsletter and Social Media -->
+                <div
+                    class="col-12 col-sm-6 text-sm-start d-flex flex-column justify-content-left mb-4 mb-sm-0 mt-2 p-4 ">
+                    <h3 class="fs-3 pb-4 px-4 text-md-left text-center ">Subscribe to our newsletter to stay in touch with the latest</h3>
+                    <div class="mx-4 email-placeholder"
+                        style="display: flex;justify-content: center;align-items: center; border-radius: 50px; border: 1px solid black;">
+                        <input  style="border: none; background: none;;" type="email" class="w-75 "
+                            placeholder="Your Email Address">
+                        <img style="background: gray; border-radius: 15px;padding: 5px;" class="my-2"
+                            src="Photo/mail-bulk.webp" alt="">
+                    </div>
+                    <b class="fs-5 mt-4 mx-2 p-1">Follow us Here:</b>
+                    <!-- Social Media Icons -->
+                    <div class="d-flex align-items-center p-1">
+                        <img width="50px" class="p-1" height="50px" src="Photo/instagram.webp" alt="" target="_blank">
+                        <img width="50px" class="p-2" src="Photo/facebook.webp" alt="" target="_blank">
+                        <img width="50px" class="p-2" src="Photo/linkedin-in.webp" alt="" target="_blank">
+                        <img width="50px" class="p-2" src="Photo/Vector-1.webp" alt="" target="_blank">
+                        <img width="50px" class="p-2" src="Photo/Vector.webp" alt="" target="_blank">
+                        <img width="50px" class="p-2" src="Photo/whatsapp.webp" alt="" target="_blank">
+                    </div>
+                </div>
+
+                <!-- Column 2: Links -->
+                <div class="col-12 col-sm-3 justify-content-center px-5 ">
+                    <b class="fs-2">Home</b>
+                    <ul class="list-unstyled" style="font-size: 20px;">
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Industries</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">About Us</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Careers</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="col-12 col-sm-3 px-5 ">
+                    <b class="fs-2 text-center">Our Services</b>
+                    <ul class="list-unstyled" style="font-size: 20px;">
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Outsourcing</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">IT Consulting</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Placement Services</a>
+                        </li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Payroll Services</a>
+                        </li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Internship</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="mt-4 mx-4">
+                <b class="fs-5">Drop us a line</b>
+                <p class=" mt-3 mail">info@madhupushpatechnologies.com</p>
+            </div>
+
+            <!-- Part 1: Service Buttons -->
+            <div class="container-fluid mt-4">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <button class="btn-with-inner-shadow">Gen-AI</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn-with-inner-shadow">Data Analytics</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn-with-inner-shadow">Full Stack</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn-with-inner-shadow">REACT/Angular</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part 2: More Service Buttons -->
+            <div class="container-fluid  mb-4">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <button class="btn-with-inner-shadow">SAP</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn-with-inner-shadow">Sales Forces</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn-with-inner-shadow">Digital Marketing</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn-with-inner-shadow">Java Script</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Section -->
+            <div class="container-fluid mt-4 bg-transparent">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <p class="fs-3" style="padding: 20px;">Show all services</p>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                This is the first item's accordion body. It is shown by default, until the collapse
+                                plugin
+                                adds the appropriate classes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <p class="fs-3" style="padding: 20px; background-color: none;">Show all technologies</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                This is the second item's accordion body. Add your content here.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <p class="fs-3" style="padding: 20px;">Show all industries</p>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                This is the third item's accordion body. Add your content here.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="container mt-4 mb-4">
+        <p class="fs-4">MadhuPushpa Technologies2025, @ All Right Reserved</p>
+    </div>
+    <hr>
+    <!-- footer edns here  -->
+   
+
+
+    <!-- linking the boostrap code  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+   
+</body>
+
+</html>

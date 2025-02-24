@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteBooster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="update.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        .container-fluid {
+            padding: 20px;
+            background: linear-gradient(to right, #f0f3f3, #c2dbd1);
+            max-width: 1200px;
+            border-radius: 10px;
+            height: 130px;
+            margin-top: 20px;
+        }
+
+        .on-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -400px;
+            margin-top: 20px;
+        }
+
+        .share-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -60px;
+            margin-top: -30px;
+        }
+
+        .on-btn i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -120px;
+            margin-top: -10px;
+        }
+
+        .share-btn i {
+            margin-left: -60px;
+            margin-top: -6px;
+        }
+
+        .Ticket-btn button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 10px 40px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: right;
+            cursor: pointer;
+            margin-left: 1000px;
+            margin-top: -70px;
+        }
+
+        .sidebar-box {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        .sidebar-box p {
+            text-align: center;
+        }
+
+        .mpt {
+            margin-left: 130px;
+        }
+
+        .rating-box {
+            text-align: center;
+            padding: 15px;
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .Demo {
+            text-align: center;
+            margin-top: -70px;
+
+        }
+
+        .fonts h1 {
+            font-family: Poppins;
+            font-weight: bold;
+            font-size: 32px;
+            margin-top: 20px;
+        }
+
+        .fonts h3 {
+            font-family: Inter;
+            font-size: 30px;
+            font-weight: lighter;
+        }
+
+        .fonts p {
+            font-family: Inter;
+            font-size: 18px;
+            font-weight: lighter;
+        }
+
+        .fonts h6 {
+            font-family: Inter;
+            font-size: 22px;
+            font-weight: lighter;
+            margin-bottom: 30px;
+        }
+
+        .fonts ul {
+            font-family: Inter;
+            font-size: 18px;
+            font-weight: lighter;
+        }
+
+        input[type="date"],
+        input[type="time"] {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 16px;
+            padding: 5px;
+            appearance: none;
+            background: linear-gradient(to right, #faffff, #bfdfd2);
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+        }
+
+        input[type="date"]::before {
+            content: attr(placeholder);
+            color: rgb(0, 0, 0);
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: brightness(0) saturate(100%);
+            margin-left: -20px;
+            cursor: pointer;
+        }
+
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            filter: brightness(0) saturate(100%);
+            margin-left: -20px;
+            cursor: pointer;
+        }
+
+        /* star section */
+        .rating-box {
+            margin-top: 15px;
+            position: relative;
+            background: #f8f9fa;
+            height: 190px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgb(0, 0, 0, 0.03);
+            /* margin-left: px; */
+        }
+
+        .rating-box header {
+            font-size: 22px;
+            color: #e36464;
+            font-weight: 500;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .rating-box.stars {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .rating-box h4 {
+            margin-left: 100px;
+            margin-top: -20px;
+        }
+
+        .stars i {
+            color: #e6e6e6;
+            font-size: 35px;
+            cursor: pointer;
+            transition: color;
+            margin-left: 14px;
+        }
+
+        .stars i.active {
+            color: #ffde08;
+        }
+
+        @media (max-width: 768px) {
+
+            .col-md-8,
+            .col-md-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .image-section img {
+                width: 100%;
+                height: auto;
+            }
+
+            .container-fluid {
+                padding: 20px;
+                background: linear-gradient(to right, #f0f3f3, #c2dbd1);
+                max-width: 740px;
+                border-radius: 20px;
+                margin-left: 10px;
+                height: 150px;
+            }
+
+            .Demo {
+                font-size: 28px;
+            }
+
+            .Ticket-btn button {
+                background-color: #000000;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-left: 600px;
+                margin-top: -50px;
+
+            }
+
+            .on-btn,
+            .share-btn {
+                padding-left: 150px;
+            }
+        }
+
+        @media (max-width: 426px) {
+            .container-fluid img {
+                margin-left: 120px;
+            }
+
+            .container-fluid {
+                padding: 20px;
+                background: linear-gradient(to right, #f0f3f3, #c2dbd1);
+                max-width: 400px;
+                border-radius: 20px;
+                height: 250px;
+                margin-left: 10px;
+            }
+
+            .Demo {
+                margin-top: 10px;
+                padding-left: 20px;
+                font-size: 20px;
+            }
+
+            .Ticket-btn button {
+                background-color: #000000;
+                color: white;
+                border: none;
+                padding: 5px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-left: 130px;
+                margin-top: 15px;
+            }
+
+            .on-btn,
+            .share-btn {
+                padding-left: 150px;
+                font-size: 12px;
+            }
+
+            .fonts {
+                h3 {
+                    font-size: 32px;
+                }
+            }
+        }
+
+        @media (max-width: 376px) {
+            .Demo {
+                font-size: 18px;
+            }
+
+            .fonts h3 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="col-4 col-md-4 col-sm-4">
+            <img src="Photos/MPT.webp" alt="" class="img-fluid" height="90px" width="90px">
+        </div>
+        <div col-4>
+            <h1 class="Demo">Program Overview Session(Demo)</h1>
+            <div class="on-btn">
+                <h6>I'm Interested</h6>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="share-btn">
+                <h6>Share</h6>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+        <div>
+            <div class="Ticket-btn"><button>Tickets</button></div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 fonts">
+                <img class="img-fluid rounded" src="Photos/Video Conten EnableSoon.webp" alt="">
+                <h1>About the event</h1>
+                <h3>Program Overview Session</h3>
+                <p> We aim to empower developer both professional and freshers through our leading product based company
+                    that provides comprehensive offline and online programs in IT as well as placement assistance.</p>
+                <h6> Our mission is to cultivate a vibrant ecosystem that inspires and motivates emerging developers.
+                </h6>
+                <h4 class="fw-bold">The session will help you gain a better understanding of :</h4>
+                <ul>
+                    <li> Overview of the 18-week curriculum </li>
+                    <li> Student portfolio showcase </li>
+                    <li> Information on fees and EMI payment plan </li>
+                    <li> Details of batch schedules and timings </li>
+                    <li> Guidance on placement assistance </li>
+                    <li> Admission process details </li>
+                    <li> Q&A </li>
+                </ul>
+                <p class="mt-2">Upon successful registration for this Program Overview Session an email containing the
+                    necessary instructions and the meeting link will be sent to your registered email ID. </p>
+                <h4 class="fw-bold">For Further Queries Contact:</h4>
+                <p>info@madhupushpatechnologies.com <br> +91 8310884090</p>
+            </div>
+
+            <div class="col-md-4">
+                <div class="sidebar-box">
+                    <p>Select your Date:
+                        <input type="date" class="form-control">
+                    </p>
+                    <p>Select your Time:
+                        <input type="time" class="form-control">
+                    </p>
+                </div>
+                <div class="sidebar-box">
+                    Learning online classes for byte-building offers flexibility, hands-on coding experience, expert
+                    guidance, cost-effectiveness, and access to global resources, enhancing skills efficiently from
+                    anywhere.
+                </div>
+                <div class="sidebar-box">
+                    <p class="fw-bold">Hosted By</p>
+                    <img src="Photos/MPT.webp" alt="" class="mpt" width="60" height="60">
+                    <div class="mt-3 d-flex justify-content-center gap-2">
+                        <img src="Photos/whatsapp.webp" alt="" width="30" height="30">
+                        <img src="Photos/facebook.webp" alt="" width="30" height="30">
+                        <img src="Photos/instagram.webp" alt="" width="30" height="30">
+                        <img src="Photos/linkedin-in.webp" alt="" width="30" height="30">
+                    </div>
+                </div>
+                <div class="rating-box mt-3">
+                    <header class="fw-bold">Program Attendees</header>
+                    <p>Review</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const stars = document.querySelectorAll(".stars i");
+
+
+stars.forEach((star, index1) => {
+    star.addEventListener("click" ,() =>{
+        stars.forEach((star, index2)=>{
+            index1 >= index2 ? star.classList.add("active") : star.classList.remove("active")
+        })
+    })
+})
+</script>
+</body>
+
+</html>
