@@ -146,6 +146,7 @@
             -webkit-text-security: disc;
 
             color: black;
+            border: 1px solid black;
         }
 
         #login-signup-container {
@@ -170,6 +171,12 @@
 
         #logout {
             display: none;
+        }
+        .close-button-margin{
+            margin-left: 90%;
+            background:rgb(87, 87, 241) ;
+            padding:0px 5px 0px 5px ;
+            cursor: pointer;
         }
         @media(max-width:768px) {
             .glass-card {
@@ -337,6 +344,7 @@
         <div class="glass-card">
             <!-- Login Form -->
             <div id="loginForm">
+                <a href="Table.html"><span class="fs-4 text-white close-button-margin">X</span></a>
                 <h2 class="text-black">Login</h2>
                 <form onsubmit="loginUser(event)">
                     <div class="mb-3">
