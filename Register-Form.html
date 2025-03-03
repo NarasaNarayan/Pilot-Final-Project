@@ -18,10 +18,20 @@
         .hidden {
             display: none;
         }
+        @media(max-width:1440px){
+            .form-width{
+                width: 70%;
+            }
+        }
+        @media(max-width:427px){
+            .form-width{
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container w-50 mt-5 position-relative" id="form-container">
+    <div class="container form-width  mt-5 position-relative" id="form-container">
         <form id="myForm" class="bg-light p-4 rounded shadow needs-validation" novalidate>
             <h1 class="text-center">Register Form</h1>
             <button type="button" class="close-btn" onclick="closeForm()">×</button>

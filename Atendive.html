@@ -330,14 +330,23 @@
         </div>
 
         <div class="qty">
-            QTY : <strong>1</strong> Total : <strong>0</strong>
+            QTY : <strong id="quantityDisplay">1</strong> Total : <strong id="quantityDisplay1">0</strong>
         </div>
 
-        <a href="Success.html"> <button class="continue-btn" onclick="validateForm()">Continue ></button></a>
+        <a href="Success.html"> <button class="continue-btn" onclick="validateForm(event)">Continue ></button></a>
     </div>
 
     <script>
-        function validateForm() {
+        // Get the query parameter from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const quantity = urlParams.get("quantity");
+
+// Display or use the quantity
+console.log("Quantity received:", quantity);
+document.getElementById("quantityDisplay").innerText = quantity; 
+
+        function validateForm(event) {
+            event.preventDefault()
             let name = document.getElementById("name").value.trim();
             let email = document.getElementById("email").value.trim();
             let phone = document.getElementById("phone").value.trim();

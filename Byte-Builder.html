@@ -247,7 +247,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
             <div>
             <!-- <div class="Ticket-btn"><button>Tickets</button></div> -->
             <div class="Ticket-btn">
-             <a href="Course.html"><button>Tickets</button></a>
+            <button  onclick="submitHandler()">Tickets</button>
             </div>
             
         </div>
@@ -279,11 +279,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
             <div class="col-md-4">
                 <div class="sidebar-box">
                     <p>Select your Date:
-                        <input type="date" class="form-control">
+                        <input id="date1" type="date" class="form-control">
                     </p>
+                    <p style="color: red;" id="dateError"></p>
                     <p>Select your Time:
-                        <input type="time" class="form-control">
+                        <input id="time1" type="time" class="form-control">
                     </p>
+                    <p style="color: red;" id="timeError"></p>
                 </div>
                 <div class="sidebar-box">
                     Learning online classes for byte-building offers flexibility, hands-on coding experience, expert guidance, cost-effectiveness, and access to global resources, enhancing skills efficiently from anywhere.
@@ -322,6 +324,23 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     <script>
         function toggleStar(element) {
             element.classList.toggle("active");
+        }
+        function submitHandler(){
+            const date=document.getElementById("date1").value;
+            const time=document.getElementById("time1").value;
+            if(date===''){
+                alert('please select date')
+                document.getElementById('dateError').innerHTML='please select the date'
+            }
+            if(time===''){
+                alert('please select time')
+                   document.getElementById('timeError').innerHTML='please select the time'
+            }
+            else{
+                window.location.href='Course.html'
+            }
+            
+
         }
     </script>    
 </body>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,12 @@
             overflow-x: hidden;
             max-width: 100%;
         }
+
         .modal-header {
             background-color: #f8f9fa;
             border-bottom: 2px solid #ddd;
         }
+
         .proceed-btn {
             background-color: rgb(255, 230, 0);
             color: white;
@@ -22,6 +25,7 @@
             padding: 10px 20px;
             width: 100%;
         }
+
         .btn-qty {
             width: 35px;
             height: 35px;
@@ -32,116 +36,134 @@
             font-weight: bold;
             line-height: 20px;
         }
+
         .quantity-controls {
             display: flex;
             align-items: center;
             justify-content: flex-end;
         }
+
         .disabled {
             opacity: 0.5;
             pointer-events: none;
         }
-        @media(max-width:320px){
+
+        @media(max-width:320px) {
             .Program {
-           font-size: 15px;
-          padding: 10px;
-         
-        }
+                font-size: 15px;
+                padding: 10px;
+
+            }
         }
     </style>
 </head>
+
 <body>
 
-<!-- Modal -->
-<div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-        
-            <div class="modal-header">
-               <a href="Byte-Builder.html"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </a>
-            </div> 
+    <!-- Modal -->
+    <div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
 
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <div class="row p-2">
-                        <div class="col-8 fw-bold">Select Tickets</div>
-                        <div class="col-4 text-end img-fluid">
-                            <img src="images/MPT.webp" alt="" height="50px" width="50px">
-                        </div>
-                    </div>
-
-                    <div class="row bg-light p-3">
-                        <div class="col-8">
-                            <p class="fw-bold m-0">Ticket types</p>
-                        </div>
-                        <div class="col-4 text-end">
-                            <p class="fw-bold m-0">Quantity</p>
-                        </div>
-                    </div>
-
-                    <div class="row p-3">
-                        <div class="col-8">
-                            <p class="fw-bold m-0 Program">Program Overview Course Session</p>
-                        </div>
-                        <div class="col-4 text-end quantity-controls">
-                            <button class="btn btn-qty" id="decreaseBtn">−</button>
-                            <span class="mx-2 fw-bold" id="quantity">1</span>
-                            <button class="btn btn-qty" id="increaseBtn">+</button>
-                        </div>
-                    </div>
+                <div class="modal-header">
+                    <a href="Byte-Builder.html"> <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button> </a>
                 </div>
 
-                <div class="bg-light p-4"></div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row p-2">
+                            <div class="col-8 fw-bold">Select Tickets</div>
+                            <div class="col-4 text-end img-fluid">
+                                <img src="images/MPT.webp" alt="" height="50px" width="50px">
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col-12 p-4">
-                        <span class="fw-bold">QTY: <span id="qtyCount">1</span> | Total: <span id="totalPrice">0</span></span>
+                        <div class="row bg-light p-3">
+                            <div class="col-8">
+                                <p class="fw-bold m-0">Ticket types</p>
+                            </div>
+                            <div class="col-4 text-end">
+                                <p class="fw-bold m-0">Quantity</p>
+                            </div>
+                        </div>
+
+                        <div class="row p-3">
+                            <div class="col-8">
+                                <p class="fw-bold m-0 Program">Program Overview Course Session</p>
+                            </div>
+                            <div class="col-4 text-end quantity-controls">
+                                <button class="btn btn-qty" id="decreaseBtn">−</button>
+                                <span class="mx-2 fw-bold" id="quantity">1</span>
+                                <button class="btn btn-qty" id="increaseBtn">+</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12">
-                       <a href="Atendive.html"> <button type="button" class="btn proceed-btn" id="proceedBtn">Proceed ➤</button> </a>              
+
+                    <div class="bg-light p-4"></div>
+
+                    <div class="row">
+                        <div class="col-12 p-4">
+                            <span class="fw-bold">QTY: <span id="qtyCount">1</span> | Total: <span
+                                    id="totalPrice">0</span></span>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn proceed-btn" id="proceedBtn">Proceed ➤</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var myModal = new bootstrap.Modal(document.getElementById('ticketModal'));
-        myModal.show(); // Automatically open the modal when the page loads
-    });
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var myModal = new bootstrap.Modal(document.getElementById('ticketModal'));
+            myModal.show(); // Automatically open the modal when the page loads
+        });
 
-    let quantity = 1; 
-    const qtyDisplay = document.getElementById("quantity");
-    const qtyCount = document.getElementById("qtyCount");
-    const proceedBtn = document.getElementById("proceedBtn");
+        let quantity = 1;
+        const qtyDisplay = document.getElementById("quantity");
+        const qtyCount = document.getElementById("qtyCount");
+        const proceedBtn = document.getElementById("proceedBtn");
 
-    document.getElementById("increaseBtn").addEventListener("click", function () {
-        quantity++;
-        updateQuantity();
-    });
-
-    document.getElementById("decreaseBtn").addEventListener("click", function () {
-        if (quantity > 0) {
-            quantity--;
+        document.getElementById("increaseBtn").addEventListener("click", function () {
+            quantity++;
             updateQuantity();
-        }
-    });
+        });
 
-    function updateQuantity() {
-        qtyDisplay.innerText = quantity;
-        qtyCount.innerText = quantity;
+        document.getElementById("decreaseBtn").addEventListener("click", function () {
+            if (quantity > 0) {
+                quantity--;
+                updateQuantity();
+            }
+        });
 
-        // Disable the "Proceed" button if quantity is 0
-        if (quantity === 0) {
-            proceedBtn.classList.add("disabled");
-        } else {
-            proceedBtn.classList.remove("disabled");
+        function updateQuantity() {
+            qtyDisplay.innerText = quantity;
+            qtyCount.innerText = quantity;
+
+            // Disable the "Proceed" button if quantity is 0
+
+            if (quantity === 0) {
+                proceedBtn.classList.add("disabled");
+            }
+
+            else {
+                proceedBtn.classList.remove("disabled");
+
+            }
+
         }
-    }
-</script>
+        // Correct event listener for the Proceed button
+        proceedBtn.addEventListener("click", function () {
+            if (quantity > 0) {
+                window.location.href = `Atendive.html?quantity=${quantity}`;
+            }
+        });
+    </script>
 
 </body>
+
 </html>
