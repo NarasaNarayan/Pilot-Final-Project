@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Development Course</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Full Stack Course</h1>
+        <div class="d-flex justify-content-end p-4">
+            <button class="btn btn-primary" onclick="window.location.href='index.html'">Go Back</button>
+         </div>
+
+        <div class="accordion" id="courseAccordion">
+           
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#introduction">
+                        <strong>Introduction to Web Development</strong>
+                    </button>
+                </h2>
+                <div id="introduction" class="accordion-collapse collapse show" data-bs-parent="#courseAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Overview of Web Development</li>
+                            <li>Understanding Client-Server Architecture</li>
+                            <li>Introduction to Full-Stack Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#frontend">
+                        <strong>Front-End Development</strong>
+                    </button>
+                </h2>
+                <div id="frontend" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>HTML & CSS</li>
+                            <li>JavaScript (Basics, DOM, Event Handling, ES6 Features)</li>
+                            <li>Front-End Frameworks (React.js, Vue.js, Angular)</li>
+                            <li>Version Control (Git, GitHub)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#backend">
+                        <strong>Back-End Development</strong>
+                    </button>
+                </h2>
+                <div id="backend" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Server-Side Programming (Node.js, Express.js)</li>
+                            <li>Database Management (MongoDB, PostgreSQL, MySQL)</li>
+                            <li>Authentication & Authorization (JWT, OAuth)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#devops">
+                        <strong>DevOps and Deployment</strong>
+                    </button>
+                </h2>
+                <div id="devops" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Local Development Environment</li>
+                            <li>Containerization with Docker</li>
+                            <li>Deploying Applications (Heroku, AWS, Vercel)</li>
+                            <li>CI/CD Basics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#testing">
+                        <strong>Testing and Debugging</strong>
+                    </button>
+                </h2>
+                <div id="testing" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Unit Testing (Jest, Mocha)</li>
+                            <li>Integration Testing</li>
+                            <li>End-to-End Testing (Cypress, Selenium)</li>
+                            <li>Debugging Techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#project">
+                        <strong>Project Development</strong>
+                    </button>
+                </h2>
+                <div id="project" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Building a Full-Stack Application</li>
+                            <li>Applying Front-End and Back-End Skills</li>
+                            <li>Project Presentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#career">
+                        <strong>Soft Skills and Career Preparation</strong>
+                    </button>
+                </h2>
+                <div id="career" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                    <div class="accordion-body">
+                        <strong>Soft Skills </strong>
+                        <ul>
+                            <li>Communication and Teamwork</li>
+                            <li>Problem-Solving Techniques</li>
+                            <strong>Career Preparation</strong>
+                            <li>Resume Building</li>
+                            <li>Interview Preparation</li>
+                            <li>Networking in Tech</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tat">
+                        <strong>Tools and Technologies </strong>
+                    </button>
+                </h2>
+                <div id="tat" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <strong>Languages:</strong>HTML, CSS, JavaScript, SQL
+                            <strong>Frameworks: </strong> React.js, Node.js, Express.js
+                            <strong>Databases: </strong>MongoDB, PostgreSQL, MySQL
+                            <strong>Version Control:</strong> Git, GitHub
+                            <strong>Deployment: </strong>Heroku, AWS, Docker
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#co">
+                        <strong>Career Opportunities </strong>
+                    </button>
+                </h2>
+                <div id="co" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Full Stack Developer </li>
+                            <li>Front-End Developer </li>
+                            <li>Back-End Developer </li>
+                            <li>Software Engineer </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ft">
+                        <strong>Final Thoughts  </strong>
+                    </button>
+                </h2>
+                <div id="ft" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
+                    <div class="accordion-body">
+                       <p>A full-stack development course provides a comprehensive understanding of both front-end and back-end technologies, preparing students for a variety of roles in web development. The hands-on projects and real-world applications ensure that students gain practical experience alongside theoretical knowledge. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+ 

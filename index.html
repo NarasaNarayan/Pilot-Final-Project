@@ -38,8 +38,99 @@
 
     <style>
 
+/* Chatbot Button */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
 
+.chatbot-icon:hover {
+    background-color: #0056b3;
+}
 
+/* Chatbot Popup */
+.chatbot-popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chatbot-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Chatbot Body */
+.chatbot-body {
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* Chatbot Options */
+.chatbot-option {
+    background: #f0f0f0;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.chatbot-option:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Next Button */
+#nextQuestion {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+}
+
+#nextQuestion:hover {
+    background: #0056b3;
+}
 
     </style>
 </head>
@@ -954,16 +1045,18 @@
             <div class="container-fluid mt-4">
                 <div class="row text-center">
                     <div class="col-md-3">
-                        <button class="btn-with-inner-shadow">Gen-AI</button>
+                        <a href="GEN-AI.html"><button class="btn-with-inner-shadow">Gen-AI</button></a>
                     </div>
                     <div class="col-md-3">
-                        <button class="btn-with-inner-shadow">Data Analytics</button>
+                        <a href="Data_analist_course_page.html"> <button class="btn-with-inner-shadow">Data
+                                Analytics</button></a>
                     </div>
                     <div class="col-md-3">
-                        <button class="btn-with-inner-shadow">Full Stack</button>
+                        <a href="Full-Stack.html"> <button class="btn-with-inner-shadow">Full Stack</button></a>
                     </div>
                     <div class="col-md-3">
-                        <button class="btn-with-inner-shadow">REACT/Angular</button>
+                        <a href="React-Angular.html"><button class="btn-with-inner-shadow">REACT/Angular</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -972,16 +1065,18 @@
             <div class="container-fluid  mb-4">
                 <div class="row text-center">
                     <div class="col-md-3">
-                        <button class="btn-with-inner-shadow">SAP</button>
+
+                        <a href="Sap.html"><button class="btn-with-inner-shadow">SAP</button></a>
                     </div>
                     <div class="col-md-3">
-                        <button class="btn-with-inner-shadow">Sales Forces</button>
+                        <a href="Sales-Force.html"><button class="btn-with-inner-shadow">Sales Forces</button></a>
                     </div>
                     <div class="col-md-3">
-                        <button class="btn-with-inner-shadow">Digital Marketing</button>
+                        <a href="Digital_Marketing.html"> <button class="btn-with-inner-shadow">Digital
+                                Marketing</button></a>
                     </div>
                     <div class="col-md-3">
-                        <button class="btn-with-inner-shadow">Java Script</button>
+                      <a href="Javascript.html"><button class="btn-with-inner-shadow">Java Script</button></a>
                     </div>
                 </div>
             </div>
@@ -1046,6 +1141,97 @@
     </div>
     <hr>
     <!-- footer edns here  -->
+     
+     <!-- Chatbot Icon -->
+<!-- Chatbot Icon -->
+<div class="chatbot-icon" id="chatbotBtn">
+    <i class="fa-solid fa-comments"></i>
+</div>
+
+<!-- Chatbot Popup -->
+<div class="chatbot-popup" id="chatbotPopup">
+    <div class="chatbot-header">
+        <h4>Chatbot</h4>
+        <button id="closeChatbot">&times;</button>
+    </div>
+    <div class="chatbot-body">
+        <p id="chatbotQuestion">Welcome! I can help with coding courses. Click 'Next' to start.</p>
+        <div id="chatbotOptions"></div>
+        <button id="nextQuestion" style="display: none;">Next</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("chatbotBtn").addEventListener("click", function() {
+        document.getElementById("chatbotPopup").style.display = "block";
+    });
+    
+    document.getElementById("closeChatbot").addEventListener("click", function() {
+        document.getElementById("chatbotPopup").style.display = "none";
+    });
+    
+    // Questions Array
+    const questions = [
+        { 
+            question: "Which coding language is best for web development?", 
+            options: ["Python", "JavaScript", "C++", "Java"]
+        },
+        { 
+            question: "What is React used for?", 
+            options: ["Backend Development", "Machine Learning", "Frontend UI", "Database Management"]
+        },
+        { 
+            question: "Which database is commonly used with MERN Stack?", 
+            options: ["MySQL", "PostgreSQL", "MongoDB", "Oracle"]
+        },
+        { 
+            question: "Which of these is a JavaScript framework?", 
+            options: ["Django", "Laravel", "Vue.js", "Flask"]
+        }
+    ];
+    
+    let currentQuestionIndex = 0;
+    
+    // Load First Question
+    function loadQuestion() {
+        const chatbotQuestion = document.getElementById("chatbotQuestion");
+        const chatbotOptions = document.getElementById("chatbotOptions");
+        const nextButton = document.getElementById("nextQuestion");
+    
+        if (currentQuestionIndex < questions.length) {
+            chatbotQuestion.innerText = questions[currentQuestionIndex].question;
+            chatbotOptions.innerHTML = "";
+            questions[currentQuestionIndex].options.forEach(option => {
+                const btn = document.createElement("div");
+                btn.classList.add("chatbot-option");
+                btn.innerText = option;
+                btn.addEventListener("click", () => {
+                    nextButton.style.display = "block"; // Show Next Button
+                });
+                chatbotOptions.appendChild(btn);
+            });
+        } else {
+            chatbotQuestion.innerText = "Thank you for chatting! 😊";
+            chatbotOptions.innerHTML = "";
+            nextButton.style.display = "none";
+        }
+    }
+    
+    // Load First Question on Chatbot Open
+    document.getElementById("chatbotBtn").addEventListener("click", function() {
+        currentQuestionIndex = 0;
+        loadQuestion();
+    });
+    
+    // Next Question Handler
+    document.getElementById("nextQuestion").addEventListener("click", function() {
+        currentQuestionIndex++;
+        loadQuestion();
+    });
+    </script>
+    
+    
+
     <script>
         // Function to show a specific card
         function showCard(cardNumber) {

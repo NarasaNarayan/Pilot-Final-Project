@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendee Details</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: rgba(0, 0, 0, 0.5);
-            /* background-image: url(Photos/Screenshot\ 2025-02-24\ 162847.png); */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,12 +38,13 @@
             margin-top: 10px;
         }
 
-        input {
+        input, textarea {
             width: 430px;
             padding: 10px;
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            resize: none;
         }
 
         .phone-input {
@@ -85,12 +86,6 @@
             text-decoration: none;
         }
 
-        .qty {
-            font-size: 16px;
-            text-align: center;
-            margin-top: 15px;
-        }
-
         .continue-btn {
             width: 100%;
             padding: 12px;
@@ -102,18 +97,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .atendee{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .atendee p{
-          background: #000;
-          color: white;
-          padding: 10px;
-          cursor: pointer;
-        }
-
 
         .continue-btn:hover {
             background: #5aa860;
@@ -121,170 +104,7 @@
 
         @media(max-width:768px) {
             .modal {
-                background: white;
-                width: 450px;
-                border-radius: 0px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-                position: relative;
-
-
-            }
-
-            h2 {
-                font-size: 18px;
-                margin: 0;
-                padding-bottom: 10px;
-            }
-
-            label {
-                font-weight: bold;
-                display: block;
-                margin-top: 10px;
-            }
-
-            input {
-                width: 430px;
-                padding: 10px;
-                margin-top: 5px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-            }
-
-            .phone-input {
-                display: flex;
-                align-items: center;
-            }
-
-            select {
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px 0 0 5px;
-                background: #f8f8f8;
-                border-right: none;
-            }
-
-            .phone-input input {
-                border-radius: 0 5px 5px 0;
-                border-left: none;
-                flex: 1;
-                margin-top: 1px;
-            }
-
-            .error {
-                color: red;
-                font-size: 12px;
-                margin-top: 5px;
-                display: none;
-            }
-
-            .footer {
-                text-align: center;
-                font-size: 12px;
-                color: gray;
-                margin-top: 10px;
-            }
-
-            .footer a {
-                color: #0073e6;
-                text-decoration: none;
-            }
-
-            .qty {
-                font-size: 16px;
-                text-align: center;
-                margin-top: 15px;
-            }
-
-            .continue-btn {
-                width: 100%;
-                padding: 12px;
-                margin-top: 15px;
-                background: #6cc070;
-                color: white;
-                font-size: 16px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            .continue-btn:hover {
-                background: #5aa860;
-            }
-
-        }
-
-        /* For screens up to 426px */
-        @media (max-width: 426px) {
-            .modal {
                 width: 90%;
-                padding: 15px;
-                margin-top: 30px;
-            }
-
-            input {
-                width: 360px;
-            }
-
-            select {
-                width: auto;
-            }
-
-            .continue-btn {
-                font-size: 14px;
-                padding: 10px;
-            }
-        }
-
-        /* For screens up to 376px */
-        @media (max-width: 376px) {
-            .modal {
-                width: 95%;
-                padding: 12px;
-            }
-
-            h2 {
-                font-size: 16px;
-            }
-
-            input {
-                width: 340px;
-                padding: 8px;
-            }
-
-            select {
-                width: auto;
-            }
-
-            .continue-btn {
-                font-size: 14px;
-                padding: 10px;
-            }
-        }
-
-        /* For screens up to 320px */
-        @media (max-width: 320px) {
-            .modal {
-                width: 98%;
-                padding: 10px;
-            }
-
-            h2 {
-                font-size: 14px;
-            }
-
-            input {
-                width: 295px;
-                padding: 8px;
-            }
-
-            select {
-                width: auto;
-            }
-
-            .continue-btn {
-                font-size: 14px;
-                padding: 8px;
             }
         }
     </style>
@@ -293,14 +113,7 @@
 <body>
 
     <div class="modal">
-        <div class="atendee">
-            <div>
-                <h2>Attendee Details</h2>
-            </div>
-            <div>
-             <a href="Byte-Builder.html"> <p>X</p></a>
-            </div>
-        </div>
+        <h2>Attendee Details</h2>
         <p><strong>Program Overview Session (DEMO) : Ticket #1</strong></p>
 
         <label for="name">Name :</label>
@@ -313,46 +126,46 @@
 
         <label for="phone">Phone :</label>
         <div class="phone-input">
-            <select>
+            <select id="countryCode">
                 <option value="+91">🇮🇳 +91</option>
                 <option value="+01">SL +01</option>
                 <option value="+342">US +342</option>
                 <option value="+04">EL +04</option>
                 <option value="+76">UK +76</option>
-
             </select>
             <input type="text" id="phone" placeholder="Enter Phone number">
         </div>
         <div class="error" id="phoneError">Please enter a valid phone number.</div>
 
+        <!-- Message Box -->
+        <label for="message">Message :</label>
+        <textarea id="message" rows="4" placeholder="Enter your message here..."></textarea>
+        <div class="error" id="messageError">Please enter a message.</div>
+
         <div class="footer">
             By continuing, I accept the <a href="#">Terms of Service</a> & the <a href="#">Privacy Policy</a>.
         </div>
 
-        <div class="qty">
-            QTY : <strong id="quantityDisplay">1</strong> Total : <strong id="quantityDisplay1">0</strong>
-        </div>
-
-        <a href="Success.html"> <button class="continue-btn" onclick="validateForm(event)">Continue ></button></a>
+        <button class="continue-btn" onclick="validateAndSendEmail(event)">Continue ></button>
     </div>
 
     <script>
-        // Get the query parameter from the URL
-const urlParams = new URLSearchParams(window.location.search);
-const quantity = urlParams.get("quantity");
+        // Initialize EmailJS with your Public Key
+        emailjs.init("cyQrmOHdWTZl_34b6"); // Replace with your EmailJS public key
 
-// Display or use the quantity
-console.log("Quantity received:", quantity);
-document.getElementById("quantityDisplay").innerText = quantity; 
+        function validateAndSendEmail(event) {
+            event.preventDefault();
 
-        function validateForm(event) {
-            event.preventDefault()
             let name = document.getElementById("name").value.trim();
             let email = document.getElementById("email").value.trim();
             let phone = document.getElementById("phone").value.trim();
+            let countryCode = document.getElementById("countryCode").value;
+            let message = document.getElementById("message").value.trim();
+
             let nameError = document.getElementById("nameError");
             let emailError = document.getElementById("emailError");
             let phoneError = document.getElementById("phoneError");
+            let messageError = document.getElementById("messageError");
 
             let isValid = true;
 
@@ -382,9 +195,33 @@ document.getElementById("quantityDisplay").innerText = quantity;
                 phoneError.style.display = "none";
             }
 
-            // If all fields are valid, redirect to success page
+            // Message validation
+            if (message === "") {
+                messageError.style.display = "block";
+                isValid = false;
+            } else {
+                messageError.style.display = "none";
+            }
+
+            // If all fields are valid, send email using EmailJS
             if (isValid) {
-                window.location.href = "success.html";
+                let templateParams = {
+                    Name: name,
+                    Email: email,
+                    Phone: `${countryCode} ${phone}`,
+                    Message: message,
+                    subject: "Attendee Registration Confirmation" 
+                };
+
+                emailjs.send("service_7ehg6fw", "template_edi5y4f", templateParams)
+                    .then(function (response) {
+                        console.log("SUCCESS!", response);
+                        alert("Email sent successfully!");
+                        window.location.href = "success.html"; // Redirect on success
+                    }, function (error) {
+                        console.log("FAILED...", error);
+                        alert("Failed to send email. Please check the console for details.");
+                    });
             }
         }
     </script>
