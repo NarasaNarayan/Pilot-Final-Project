@@ -110,7 +110,6 @@
 
 
         }
-       
     </style>
 </head>
 
@@ -121,20 +120,22 @@
 
 
 
-    <nav class="navbar  navbar-expand-lg navbar-light fixing-navbar-top" style=' position: fixed; top: 0; width: 100%; z-Index:1000; '>
+    <nav class="navbar  navbar-expand-lg navbar-light fixing-navbar-top"
+        style=' position: fixed; top: 0; width: 100%; z-Index:1000; '>
         <div class="container-fluid navbar-img">
-            <a class="pt-3 pb-3 " href="index.html"><img class="logo-image" width="120px" height="100px" src="Photo/MPT.webp" alt=""></a>
+            <a class="pt-3 pb-3 " href="index.html"><img class="logo-image" width="120px" height="100px"
+                    src="Photo/MPT.webp" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav" >
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link " href="#" id="industriesDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link " href="#" id="industriesDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Industries
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="industriesDropdown" >
+                        <ul class="dropdown-menu" aria-labelledby="industriesDropdown">
                             <div class="industries-title">Industries <span class="dropdown-indicator"></span></div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -194,7 +195,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <li><a class="dropdown-item" href="Whoweare.html">Who we are</a></li>
-                                    
+
                                     <li><a class="dropdown-item" href="#">Message from CEO</a></li>
                                     <li><a class="dropdown-item" href="#">About MPT</a></li>
                                     <img width="200px" height="200px" src="Photo/19.webp" alt="">
@@ -241,12 +242,12 @@
     </nav>
     <!-- Navbar ends here  -->
 
-    <h3 class="text-center" style="font-family: poppins; font-size: 32px; margin-top: 150px; padding-top: 40px;"><b>Contact Us</b></h3>
+    <h3 class="text-center" style="font-family: poppins; font-size: 32px; margin-top: 150px; padding-top: 40px;">
+        <b>Contact Us</b></h3>
     <div class="container mt-5 ">
         <div class="row">
             <!-- Welcome Text -->
-            <div class="col-md-6"
-                style="font-family: Poppins, serif; font-size: 20px; text-align: justify; ">
+            <div class="col-md-6" style="font-family: Poppins, serif; font-size: 20px; text-align: justify; ">
                 <h2></h2>
                 <p>
                     Welcome to Madhupushpa Technologies! We established in 2020, Madhupushpa Technologies is a software
@@ -261,25 +262,32 @@
 
             <!-- Contact Form -->
             <div class="col-md-6 px-5" style="margin-top: 50px; ">
-                <div class="contact-form" >
+                <div class="contact-form">
                     <!-- <h3 style="font-family: poppins; font-size: 36px;">Contact Us</h3> -->
                     <form>
                         <div class="row mb-3" style="font-family: Oxanium;">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="First Name" required>
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name"
+                                    required>
                             </div>
+                           
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Last Name">
+                                <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
                             </div>
                         </div>
                         <div class="mb-3" style="font-family: Oxanium;">
-                            <input type="email" class="form-control" placeholder="Email*" required>
+                            <input type="email" class="form-control" id="email" placeholder="Email*" required>
                         </div>
                         <div class="mb-3" style="font-family: Oxanium;">
-                            <textarea class="form-control" rows="4" placeholder="Write a Message"></textarea>
+                            <input type="text" class="form-control" id="phone" placeholder="Phone" required>
+                        </div>
+                        <div class="mb-3" style="font-family: Oxanium;">
+                            <textarea class="form-control" rows="4" placeholder="Write a Message"
+                                id="message" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-submit"
-                            style="font-family: Oxanium; font-size: 24px; box-shadow: inset 2px 2px 2px 2px gray;">Submit</button>
+                            style="font-family: Oxanium; font-size: 24px; box-shadow: inset 2px 2px 2px 2px gray;"
+                            onclick="sendEmail(event)">Submit</button>
                     </form>
                 </div>
             </div>
@@ -307,12 +315,12 @@
 
         <div class="row">
             <!-- Address Section -->
-            <div class="col-md-6 mb-4"  style="padding-left: 100px;">
+            <div class="col-md-6 mb-4" style="padding-left: 100px;">
                 <h5 style="font-family: Oxanium; font-size: 36px;">Address</h5>
                 <p style="font-size: Poppins; font-size: 22px;">
-                    48, SKS Compound, Hosur Rd,beside Dayanand Sagar University, 
+                    48, SKS Compound, Hosur Rd,beside Dayanand Sagar University,
                     Kudlu Gate,Bengaluru,Karnataka 560068</p>
-                
+
 
             </div>
 
@@ -340,79 +348,79 @@
 
 
     <!-- <h5 style="text-align: center;"><b>Location Map</b></h5> -->
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.8835301763237!2d77.63510091483048!3d12.
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.8835301763237!2d77.63510091483048!3d12.
         90507639089448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13b90b98c0eb%3A0x6d8bdebe5df09b5c!2s48%2C%20SKS%20Compound%2C%20Hosur%20Rd%2C%20beside%20Dayanand%20Sagar%20University%2C%20Kudlu%20Gate%2C%20
-        Bengaluru%2C%20Karnataka%20560068!5e0!3m2!1sen!2sin!4v1234567890"
-        width="90%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        Bengaluru%2C%20Karnataka%20560068!5e0!3m2!1sen!2sin!4v1234567890" width="90%" height="300" style="border:0;"
+        allowfullscreen="" loading="lazy">
     </iframe>
     <!-- Map Section -->
 
 
-                        <!-- footer section starts here  -->
+    <!-- footer section starts here  -->
 
-                        <footer class="bg-light py-4 mt-3 shadow-sm email-box ">
-                            <div class="container-fluid">
-                                <!-- Row 1: Subscribe and Social Media -->
-                                <div class="row justify-content-left">
-                                    <!-- Column 1: Newsletter and Social Media -->
-                                    <div
-                                        class="col-12 col-sm-6 text-sm-start d-flex flex-column justify-content-left mb-4 mb-sm-0 mt-2 p-4 ">
-                                        <h3 class="fs-3 pb-4 px-4 text-md-left text-center ">Subscribe to our newsletter to stay in touch with the latest</h3>
-                                        <div class="mx-4 email-placeholder"
-                                            style="display: flex;justify-content: center;align-items: center; border-radius: 50px; border: 1px solid black;">
-                                            <input  style="border: none; background: none;;" type="email" class="w-75 "
-                                                placeholder="Your Email Address">
-                                            <img style="background: gray; border-radius: 15px;padding: 5px;" class="my-2"
-                                                src="Photo/mail-bulk.webp" alt="">
-                                        </div>
-                                        <b class="fs-5 mt-4 mx-2 p-1">Follow us Here:</b>
-                                        <!-- Social Media Icons -->
-                                        <div class="d-flex align-items-center p-1">
-                                            <img width="50px" class="p-1" height="50px" src="Photo/instagram.webp" alt="" target="_blank">
-                                            <img width="50px" class="p-2" src="Photo/facebook.webp" alt="" target="_blank">
-                                            <img width="50px" class="p-2" src="Photo/linkedin-in.webp" alt="" target="_blank">
-                                            <img width="50px" class="p-2" src="Photo/Vector-1.webp" alt="" target="_blank">
-                                            <img width="50px" class="p-2" src="Photo/Vector.webp" alt="" target="_blank">
-                                            <img width="50px" class="p-2" src="Photo/whatsapp.webp" alt="" target="_blank">
-                                        </div>
-                                    </div>
-                    
-                                    <!-- Column 2: Links -->
-                                    <div class="col-12 col-sm-3 justify-content-center px-5 ">
-                                        <b class="fs-2">Home</b>
-                                        <ul class="list-unstyled" style="font-size: 20px;">
-                                            <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Industries</a></li>
-                                            <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">About Us</a></li>
-                                            <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Careers</a></li>
-                                            <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Contact Us</a></li>
-                                            <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Blogs</a></li>
-                                        </ul>
-                                    </div>
-                    
-                                    <!-- Column 3: Services -->
-                                    <div class="col-12 col-sm-3 px-5 ">
-                                        <b class="fs-2 text-center">Our Services</b>
-                                        <ul class="list-unstyled" style="font-size: 20px;">
-                                            <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Outsourcing</a></li>
-                                            <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">IT Consulting</a></li>
-                                            <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Placement Services</a>
-                                            </li>
-                                            <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Payroll Services</a>
-                                            </li>
-                                            <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Internship</a></li>
-                    
-                                        </ul>
-                                    </div>
-                                </div>
-                    
-                                <!-- Contact -->
-                                <div class="mt-4 mx-4">
-                                    <b class="fs-5">Drop us a line</b>
-                                    <p class=" mt-3 mail">info@madhupushpatechnologies.com</p>
-                                </div>
-                    
-                               
+    <footer class="bg-light py-4 mt-3 shadow-sm email-box ">
+        <div class="container-fluid">
+            <!-- Row 1: Subscribe and Social Media -->
+            <div class="row justify-content-left">
+                <!-- Column 1: Newsletter and Social Media -->
+                <div
+                    class="col-12 col-sm-6 text-sm-start d-flex flex-column justify-content-left mb-4 mb-sm-0 mt-2 p-4 ">
+                    <h3 class="fs-3 pb-4 px-4 text-md-left text-center ">Subscribe to our newsletter to stay in touch
+                        with the latest</h3>
+                    <div class="mx-4 email-placeholder"
+                        style="display: flex;justify-content: center;align-items: center; border-radius: 50px; border: 1px solid black;">
+                        <input style="border: none; background: none;;" type="email" class="w-75 "
+                            placeholder="Your Email Address">
+                        <img style="background: gray; border-radius: 15px;padding: 5px;" class="my-2"
+                            src="Photo/mail-bulk.webp" alt="">
+                    </div>
+                    <b class="fs-5 mt-4 mx-2 p-1">Follow us Here:</b>
+                    <!-- Social Media Icons -->
+                    <div class="d-flex align-items-center p-1">
+                        <img width="50px" class="p-1" height="50px" src="Photo/instagram.webp" alt="" target="_blank">
+                        <img width="50px" class="p-2" src="Photo/facebook.webp" alt="" target="_blank">
+                        <img width="50px" class="p-2" src="Photo/linkedin-in.webp" alt="" target="_blank">
+                        <img width="50px" class="p-2" src="Photo/Vector-1.webp" alt="" target="_blank">
+                        <img width="50px" class="p-2" src="Photo/Vector.webp" alt="" target="_blank">
+                        <img width="50px" class="p-2" src="Photo/whatsapp.webp" alt="" target="_blank">
+                    </div>
+                </div>
+
+                <!-- Column 2: Links -->
+                <div class="col-12 col-sm-3 justify-content-center px-5 ">
+                    <b class="fs-2">Home</b>
+                    <ul class="list-unstyled" style="font-size: 20px;">
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Industries</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">About Us</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Careers</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="col-12 col-sm-3 px-5 ">
+                    <b class="fs-2 text-center">Our Services</b>
+                    <ul class="list-unstyled" style="font-size: 20px;">
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Outsourcing</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">IT Consulting</a></li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Placement Services</a>
+                        </li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Payroll Services</a>
+                        </li>
+                        <li class="mb-2 fs-3"><a href="#" class="text-dark text-decoration-none">Internship</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="mt-4 mx-4">
+                <b class="fs-5">Drop us a line</b>
+                <p class=" mt-3 mail">info@madhupushpatechnologies.com</p>
+            </div>
+
+
             <!-- Part 1: Service Buttons -->
             <div class="container-fluid mt-4">
                 <div class="row text-center">
@@ -448,114 +456,158 @@
                                 Marketing</button></a>
                     </div>
                     <div class="col-md-3">
-                      <a href="Javascript.html"><button class="btn-with-inner-shadow">Java Script</button></a>
+                        <a href="Javascript.html"><button class="btn-with-inner-shadow">Java Script</button></a>
                     </div>
                 </div>
             </div>
-                    
-                                <!-- Accordion Section -->
-                                <div class="container-fluid mt-4 bg-transparent">
-                                    <div class="accordion" id="accordionExample">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    <p class="fs-3" style="padding: 20px;">Show all services</p>
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                                data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    This is the first item's accordion body. It is shown by default, until the collapse
-                                                    plugin
-                                                    adds the appropriate classes.
-                                                </div>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    <p class="fs-3" style="padding: 20px; background-color: none;">Show all technologies</p>
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                                data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    This is the second item's accordion body. Add your content here.
-                                                </div>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingThree">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    <p class="fs-3" style="padding: 20px;">Show all industries</p>
-                                                </button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                                data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    This is the third item's accordion body. Add your content here.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
+            <!-- Accordion Section -->
+            <div class="container-fluid mt-4 bg-transparent">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <p class="fs-3" style="padding: 20px;">Show all services</p>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                This is the first item's accordion body. It is shown by default, until the collapse
+                                plugin
+                                adds the appropriate classes.
                             </div>
-                        </footer>
-
-
-                        <div class="container mt-4 mb-4">
-                            <p class="fs-4">MadhuPushpa Technologies2025, @ All Right Reserved</p>
                         </div>
-                        <hr>
-                        <!-- footer edns here  -->
-                        <script>
-                            // Function to show a specific card
-                            function showCard(cardNumber) {
-                                // Hide all cards
-                                const cards = document.querySelectorAll('.testimonial-card');
-                                cards.forEach(card => card.classList.add('hidden'));
+                    </div>
 
-                                // Show the selected card
-                                const selectedCard = document.getElementById(`card-${cardNumber}`);
-                                selectedCard.classList.remove('hidden');
-                            }
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <p class="fs-3" style="padding: 20px; background-color: none;">Show all technologies</p>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                This is the second item's accordion body. Add your content here.
+                            </div>
+                        </div>
+                    </div>
 
-                            // Optional: Make the cards draggable
-                            const dragContainer = document.getElementById('drag-container');
-                            let isDragging = false;
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <p class="fs-3" style="padding: 20px;">Show all industries</p>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                This is the third item's accordion body. Add your content here.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-                            dragContainer.addEventListener('mousedown', () => (isDragging = true));
-                            dragContainer.addEventListener('mouseup', () => (isDragging = false));
-                            dragContainer.addEventListener('mouseleave', () => (isDragging = false));
-                            dragContainer.addEventListener('mousemove', e => {
-                                if (!isDragging) return;
-                                dragContainer.scrollLeft -= e.movementX;
-                            });
-                        </script>
 
+    <div class="container mt-4 mb-4">
+        <p class="fs-4">MadhuPushpa Technologies2025, @ All Right Reserved</p>
+    </div>
+    <hr>
+    <!-- footer edns here  -->
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-                        <!-- linking the boostrap code  -->
-                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-                            crossorigin="anonymous"></script>
-                        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    <script>
+        (function () {
+            emailjs.init("WppRzsA1EUM5qIUku"); // Replace with your Email.js Public Key
+        })();
+    
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent form submission
+    
+            // Get form values
+            var firstName = document.getElementById("firstName").value.trim();
+            var lastName = document.getElementById("lastname").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var message = document.getElementById("message").value.trim();
+            var Phone = document.getElementById("phone").value.trim();
+    
+            // Validation regex
+            var nameRegex = /^[A-Za-z]+$/;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+            // Validation checks
+            if (firstName === "") {
+                alert("First Name is required.");
+                document.getElementById('name').innerHTML='please enter name correctly'
+                return;
+            }
+            if (lastName === "") {
+                alert("LastName is required.");
+                return;
+
+            }
+            if (!nameRegex.test(firstName)) {
+                alert("First Name should only contain letters.");
+                return;
+            }
+            if (lastName !== "" && !nameRegex.test(lastName)) {
+                alert("Last Name should only contain letters.");
+                return;
+            }
+            if (email === "") {
+                alert("Email is required.");
+                return;
+            }
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+            if (message === "") {
+                alert("Message cannot be empty.");
+                return;
+            }
+            if (Phone === "") {
+                alert("phone number cannot be empty.");
+                return;
+            }
+    
+            // Create email parameters
+            var templateParams = {
+                Name: firstName + " " + lastName,
+                Email: email,
+                Message: message,
+                Phone:Phone,
+                Subject: "Enquiry form"
+            };
+    
+            // Send email using Email.js
+            emailjs.send("service_huqc4ci", "template_4xlpy1e", templateParams)
+                .then(function (response) {
+                    alert("Message sent successfully!");
+                    console.log("SUCCESS!", response.status, response.text);
+                    document.getElementById("contactForm").reset(); // Reset form after successful submission
+                }, function (error) {
+                    alert("Failed to send message. Please try again later.");
+                    console.log("FAILED...", error);
+                });
+        }
+    </script>
+    
+
+    <!-- linking the boostrap code  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script> -->
-                        <!-- <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/tiny-slider.js"></script>
-        <script src="js/aos.js"></script>
-        <script src="js/navbar.js"></script>
-        <script src="js/counter.js"></script>
-        <script src="js/custom.js"></script> -->
+
+
 </body>
 
 </html>

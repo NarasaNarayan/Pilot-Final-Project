@@ -151,7 +151,7 @@
 
     <script>
         // Initialize EmailJS with your Public Key
-        emailjs.init("cyQrmOHdWTZl_34b6"); // Replace with your EmailJS public key
+        emailjs.init("WppRzsA1EUM5qIUku"); // Replace with your EmailJS public key
 
         function validateAndSendEmail(event) {
             event.preventDefault();
@@ -210,10 +210,10 @@
                     Email: email,
                     Phone: `${countryCode} ${phone}`,
                     Message: message,
-                    subject: "Attendee Registration Confirmation" 
+                    Subject: "Program Overview Session Demo" 
                 };
 
-                emailjs.send("service_7ehg6fw", "template_edi5y4f", templateParams)
+                emailjs.send("service_huqc4ci", "template_4xlpy1e", templateParams)
                     .then(function (response) {
                         console.log("SUCCESS!", response);
                         alert("Email sent successfully!");

@@ -81,7 +81,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         (function () {
-            emailjs.init("cyQrmOHdWTZl_34b6"); // Replace with your EmailJS Public Key
+            emailjs.init("WppRzsA1EUM5qIUku"); // Replace with your EmailJS Public Key
         })();
 
         document.getElementById("myForm").addEventListener("submit", function (event) {
@@ -101,12 +101,12 @@
                 let message = document.getElementById("message").value;
 
                 // Sending email using EmailJS
-                emailjs.send("service_7ehg6fw", "template_edi5y4f", {
+                emailjs.send("service_huqc4ci", "template_4xlpy1e", {
                     Name: name,
                     Email: email,
                     Phone: phone,
                     Message: message,
-                    subject: " Registration Confirmation" 
+                    Subject: " Registration Confirmation" 
                 })
                 .then(function (response) {
                     console.log("SUCCESS!", response.status, response.text);
